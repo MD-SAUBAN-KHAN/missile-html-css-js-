@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button below to proceed</p>
+
+<button onclick="myFunction()">CONFIRM MISSILE</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var r = confirm("Press a button!\nEither Confirm or Cancel.");
+  
+if (r == true) 
+ {txt = "You pressed OK!"; 
+window.location.href = "launch.html";
+  } else {
+   
+window.location.href = "home.html";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<img align="center" src="icbm1.jpg" hight="500" width="500" >
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-image: url('show.gif');
+    
+     background-size: 1600px 750px;
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+</style>
+<script>
+// Countdown timer for redirecting to another URL after several seconds
+
+var seconds = 18; // seconds for HTML
+var foo; // variable for clearInterval() function
+
+function redirect() {
+    document.location.href = "final.html";
+
+}
+
+function updateSecs() {
+    document.getElementById("seconds").innerHTML = seconds;
+    seconds--;
+    if (seconds == -1) {
+        clearInterval(foo);
+        redirect();
+    }
+}
+
+function countdownTimer() {
+    foo = setInterval(function () {
+        updateSecs()
+    }, 1000);
+}
+
+countdownTimer();
+</script></head>
+<body>
+<p style="color:cyan;">Missile will automatically detonate the target in <span id="seconds">18</span> seconds.
+</p></body>
+</html>
